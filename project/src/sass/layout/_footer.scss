@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../base//utilities" as *;
+@use "../components/link" as *;
+@use "../components/logo" as *;
+
+.footer {
+  @include flexRowCenter();
+
+  &__attribution {
+    color: $clr-grey;
+    font-size: rem(12);
+
+    a {
+      color: currentColor;
+    }
+  }
+}

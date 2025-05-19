@@ -1,0 +1,32 @@
+{
+  "name": "project",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "watch:css": "bunx @tailwindcss/cli -i ./src/post-css/main-tailwind.css -o ./src/css/main.css --watch",
+    "dev": "bun run server.ts",
+    "devAll": "bun run dev.ts",
+    "build": "bun run export.ts"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/bun": "latest",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-functions": "^4.0.2",
+    "postcss-import": "^16.1.0",
+    "postcss-mixins": "^11.0.3",
+    "postcss-nested": "^7.0.2",
+    "tailwindcss": "^4.1.7",
+    "tailwindcss-cli": "^0.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "postcss-simple-vars": "^7.0.1"
+  },
+  "browserslist": "> 1%, last 2 versions, not dead"
+}

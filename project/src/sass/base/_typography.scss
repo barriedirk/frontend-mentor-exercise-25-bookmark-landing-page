@@ -1,0 +1,10 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $ff;
+  font-weight: $fw-normal;
+  font-size: rem($default-font-size);
+  line-height: 1.5;
+  color: $clr-black;
+}

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@import "./abstracts/variables.css";
+
+
+/* @import "./base/typography.css";
+
+@import "./layout/header.css";
+@import "./layout/footer.css";
+
+@import "./components/button.css";
+@import "./components/card.css";
+
+@import "./pages/home.css"; */
+
+/* You can even import utilities if needed */
+/* @import "./utilities/helpers.css"; */
+
+
+/* 
+@import "abstract/mixins";
+@import "abstract/functions";
+@import "tailwindcss";
+
+.button {
+  @include button-style;
+  padding: px-to-rem(20);
+} */

@@ -1,0 +1,215 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@use "../base/utilities" as *;
+
+.hero {
+  @include flexColumnCenter;
+  padding: rem(96) rem(25);
+
+  &__wrapper {
+    @include flexColumnCenter;
+    gap: rem(30);
+  }
+
+  &__picture {
+    margin-bottom: rem(15);
+  }
+
+  &__intro {
+    @include flexColumnCenter;
+    gap: rem(32);
+    margin-bottom: rem(60);
+    background-color: $clr-white;
+  }
+
+  &__headline,
+  &__section-title {
+    font-family: $ff-josefina;
+    font-size: rem(32);
+    line-height: 1;
+    font-weight: $fw-light;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: rem(15);
+    font-weight: $fw-normal;
+    line-height: 1.6666666667;
+    opacity: 0.4994;
+    text-align: center;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 327 / 224;
+  }
+
+  &__gallery {
+    @include flexColumnCenter;
+    gap: rem(55);
+    width: 100%;
+
+    &--list {
+      @include flexColumnCenter;
+      gap: rem(40);
+      width: 100%;
+    }
+
+    &-image {
+      width: 100%;
+      aspect-ratio: 327 / 120;
+    }
+
+    &-title {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      width: rem(123);
+      height: rem(48);
+      color: $clr-white;
+      font-family: $ff-josefina;
+      font-size: rem(24);
+      line-height: 1;
+      font-weight: $fw-light;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    &-title--break {
+      width: rem(50);
+    }
+
+    &-item {
+      position: relative;
+      width: fit-content;
+
+      &:hover {
+        img {
+          opacity: 0.3;
+        }
+        span {
+          color: $clr-black;
+        }
+      }
+    }
+  }
+
+  &__see-all-link {
+    display: inline-block;
+    width: rem(170);
+    padding: rem(13) rem(43);
+    font-size: rem(14);
+    font-weight: $fw-normal;
+    letter-spacing: rem(5px);
+    border: 1px solid $clr-black;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $clr-black;
+
+    &:hover {
+      background-color: $clr-black;
+      color: $clr-white;
+    }
+  }
+
+  @include respondMinWidth(phone) {
+    &__picture {
+      grid-area: hero__picture;
+    }
+
+    &__image {
+      aspect-ratio: 731 / 500;
+      max-width: rem(731);
+    }
+
+    &__intro {
+      grid-area: hero__intro;
+      position: absolute;
+      aspect-ratio: 541 / 317;
+      width: rem(400);
+      height: auto;
+      justify-content: flex-end;
+      margin-bottom: 0;
+      padding: rem(20) 0 0 rem(20);
+      right: 0;
+      top: rem(34);
+    }
+
+    &__section-title,
+    &__headline {
+      font-size: rem(48);
+      text-align: left;
+    }
+
+    &__description {
+      text-align: left;
+    }
+
+    &__section-title {
+      grid-area: hero__section_title;
+    }
+
+    &__see-all-link {
+      grid-area: hero__see_all_link;
+      justify-self: end;
+    }
+
+    &__gallery {
+      margin-top: rem(96);
+      display: grid;
+      grid-area: hero__gallery;
+      justify-content: normal;
+
+      grid-template-areas:
+        "hero__section_title hero__see_all_link"
+        "hero__gallery__list hero__gallery__list";
+
+      &--list {
+        grid-area: hero__gallery__list;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(rem(256), 1fr));
+        gap: rem(32);
+      }
+
+      &-image {
+        width: 100%;
+        aspect-ratio: 256 / 450;
+        max-width: rem(256);
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      display: block;
+      justify-content: baseline;
+    }
+  }
+
+  @include respondMinWidth(tab-port) {
+    &__intro {
+      width: rem(450);
+      justify-content: flex-end;
+      margin-bottom: 0;
+      padding: rem(50) 0 0 rem(50);
+      top: rem(200);
+    }
+  }
+
+  @include respondMinWidth(tab-land) {
+    &__intro {
+      width: rem(541);
+      padding: rem(90) 0 0 rem(90);
+      transform: none;
+      right: 0;
+      left: rem(575);
+      top: rem(183);
+    }
+
+    &__gallery {
+      margin-top: rem(180);
+    }
+  }
+}

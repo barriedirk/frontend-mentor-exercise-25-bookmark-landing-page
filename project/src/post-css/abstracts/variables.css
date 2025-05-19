@@ -1,0 +1,21 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-grey: #a0a0a0;
+  --default-font-size: 15px;
+  --ff: "League Spartan", sans-serif;
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+  --ls-sm: -0.5px;
+  --ls-md: 0px;
+  --ls-lg: 0.5px;
+  --ls-xl: 1px;
+  --ls-xxl: 2px;
+}

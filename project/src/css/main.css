@@ -7,13 +7,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-yellow-200: oklch(94.5% 0.129 101.54);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-white: #fff;
     --spacing: 0.25rem;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -164,38 +159,126 @@
   }
 }
 @layer utilities {
-  .static {
-    position: static;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .h-\[14px\] {
+    height: 14px;
+  }
+  .h-\[25px\] {
+    height: 25px;
+  }
+  .w-\[111px\] {
+    width: 111px;
+  }
+  .w-\[148px\] {
+    width: 148px;
+  }
+  .max-w-1440 {
+    max-width: calc(var(--spacing) * 1440);
+  }
+  .max-w-full {
+    max-width: 100%;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
+  .flex-row {
+    flex-direction: row;
   }
-  .bg-yellow-200 {
-    background-color: var(--color-yellow-200);
+  .justify-between {
+    justify-content: space-between;
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
+  .justify-center {
+    justify-content: center;
   }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .bg-transparent {
+    background-color: transparent;
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .bg-white {
+    background-color: var(--color-white);
   }
-  .text-blue-600 {
-    color: var(--color-blue-600);
+  .px-\[20px\] {
+    padding-inline: 20px;
+  }
+  .px-\[28px\] {
+    padding-inline: 28px;
+  }
+  .py-\[40px\] {
+    padding-block: 40px;
+  }
+  .align-middle {
+    vertical-align: middle;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .lg\:max-w-1440 {
+    @media (width >= 64rem) {
+      max-width: calc(var(--spacing) * 1440);
+    }
+  }
+}
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-blue-950: #242A45;
+  --clr-blue-600: #5267DF;
+  --clr-grey-600: #5B6074;
+  --clr-grey-50: #F7F7F7;
+  --clr-red-400: #FA5959;
+  --default-font-size: 18px;
+  --ff: "Rubik", sans-serif;
+  --fw-thin: 100;
+  --fw-extralight: 200;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+  --ls-sm: -0.5px;
+  --ls-md: 0px;
+  --ls-lg: 0.5px;
+  --ls-xl: 1px;
+  --ls-xxl: 2px;
+  --spacing: 0;
+}
+body {
+  font-family: var(--ff);
+  font-size: var(--default-font-size);
+}
+.header__toggle[aria-expanded="false"] {
+  background-image: url('../assets/icon-hamburger.svg');
+  width: 18px;
+  height: 15px;
+}
+.header__toggle[aria-expanded="true"] {
+  background-image: url('../assets/icon-close.svg');
+  width: 14.85px;
+  height: 14.85px;
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -217,9 +300,10 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
+  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
@@ -282,7 +366,7 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-font-weight: initial;
+      --tw-border-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

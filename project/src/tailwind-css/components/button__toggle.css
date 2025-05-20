@@ -1,0 +1,11 @@
+.header__toggle[aria-expanded="false"] {
+    background-image: url('../assets/icon-hamburger.svg');
+    width: 18px;
+    height: 15px;
+}
+
+.header__toggle[aria-expanded="true"] {
+    background-image: url('../assets/icon-close.svg');
+    width: 14.85px;
+    height: 14.85px;
+}

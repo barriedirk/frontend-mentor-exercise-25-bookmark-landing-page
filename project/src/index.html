@@ -51,11 +51,9 @@
     <link rel="stylesheet" href="./css/main.css" />
     <script type="module" src="./js/main.js"></script>
   </head>
-  <body class="bg-white">
-    <header id="header" class="header py-[40px] px-[28px]" role="banner">
-      <div
-        class="max-w-full lg:max-w-1440 mx-auto flex flex-row justify-between align-middle"
-      >
+  <body class="bg-white pt-[45px] px-[28px]">
+    <header id="header" class="header" role="banner">
+      <div class="container flex flex-row justify-between align-middle">
         <a href="/" class="header__logo" aria-label="Go to homepage">
           <img
             class="w-[148px] h-[25px]"
@@ -106,48 +104,79 @@
         </nav>
       </div>
     </header>
-    <main>
-      <div class="max-w-full lg:max-w-1440 mx-auto">
-        <h1>A Simple Bookmark Manager</h1>
+    <main class="main">
+      <div class="container">
+        <section class="hero mt-16" aria-labelledby="hero__title">
+          <figure class="hero__figure m-auto relative">
+            <img
+              src="./assets/illustration-hero.svg"
+              alt="Illustration of a browser"
+              class="hero__image"
+              role="presentation"
+              aria-hidden="true"
+            />
+          </figure>
 
-        <p>
-          A clean and simple interface to organize your favourite websites. Open
-          a new browser tab and see your sites load instantly. Try it for free.
-        </p>
+          <h1 class="hero__title mt-24 mb-8" id="hero__title">
+            A Simple Bookmark Manager
+          </h1>
 
-        <a>Get it on Chrome</a>
-        <a>Get it on Firefox</a>
+          <p class="hero__description opacity-50 mb-8">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
 
-        <h2>Features</h2>
+          <div class="hero__actions">
+            <button
+              type="button"
+              class="hero__button"
+              aria-label="Download for Chrome"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              type="button"
+              class="hero__button"
+              aria-label="Download for Firefox"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </section>
 
-        <p>
-          Our aim is to make it quick and easy for you to access your favourite
-          websites. Your bookmarks sync between your devices so you can access
-          them on the go.
-        </p>
+        <section class="features mt-36">
+          <h2>Features</h2>
 
-        <a>Simple Bookmarking</a>
-        <a>Speedy Searching</a>
-        <a>Easy Sharing</a>
+          <p>
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
 
-        <h2>Bookmark in one click</h2>
+          <a>Simple Bookmarking</a>
+          <a>Speedy Searching</a>
+          <a>Easy Sharing</a>
 
-        <p>
-          Organize your bookmarks however you like. Our simple drag-and-drop
-          interface gives you complete control over how you manage your
-          favourite sites.
-        </p>
+          <h2>Bookmark in one click</h2>
 
-        <a>More Info</a>
+          <p>
+            Organize your bookmarks however you like. Our simple drag-and-drop
+            interface gives you complete control over how you manage your
+            favourite sites.
+          </p>
 
-        <h2>Intelligent search</h2>
+          <a>More Info</a>
 
-        <p>
-          Our powerful search feature will help you find saved sites in no time
-          at all. No need to trawl through all of your bookmarks.
-        </p>
+          <h2>Intelligent search</h2>
 
-        <a>More Info</a>
+          <p>
+            Our powerful search feature will help you find saved sites in no
+            time at all. No need to trawl through all of your bookmarks.
+          </p>
+
+          <a>More Info</a>
+        </section>
 
         <h2>Share your bookmarks</h2>
 
@@ -222,7 +251,7 @@
       </div>
     </main>
     <footer>
-      <div class="max-w-full lg:max-w-1440 mx-auto"></div>
+      <div class="container"></div>
     </footer>
     <!-- <footer class="footer__attribution">
       Challenge by

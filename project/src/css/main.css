@@ -170,8 +170,53 @@
     white-space: nowrap;
     border-width: 0;
   }
-  .mx-auto {
-    margin-inline: auto;
+  .relative {
+    position: relative;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .m-auto {
+    margin: auto;
+  }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
+  .mt-36 {
+    margin-top: calc(var(--spacing) * 36);
+  }
+  .mt-\[60px\] {
+    margin-top: 60px;
+  }
+  .mt-\[100px\] {
+    margin-top: 100px;
+  }
+  .mt-\[145px\] {
+    margin-top: 145px;
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-\[30px\] {
+    margin-bottom: 30px;
   }
   .flex {
     display: flex;
@@ -179,23 +224,14 @@
   .hidden {
     display: none;
   }
-  .h-\[14px\] {
-    height: 14px;
-  }
   .h-\[25px\] {
     height: 25px;
-  }
-  .w-\[111px\] {
-    width: 111px;
   }
   .w-\[148px\] {
     width: 148px;
   }
   .max-w-1440 {
     max-width: calc(var(--spacing) * 1440);
-  }
-  .max-w-full {
-    max-width: 100%;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -219,34 +255,31 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .px-\[20px\] {
-    padding-inline: 20px;
-  }
   .px-\[28px\] {
     padding-inline: 28px;
   }
-  .py-\[40px\] {
-    padding-block: 40px;
+  .pt-\[45px\] {
+    padding-top: 45px;
   }
   .align-middle {
     vertical-align: middle;
   }
+  .opacity-50 {
+    opacity: 50%;
+  }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .lg\:max-w-1440 {
-    @media (width >= 64rem) {
-      max-width: calc(var(--spacing) * 1440);
-    }
   }
 }
 :root {
   --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-blue-950: #242A45;
+  --clr-blue-950-75: rgba(36, 42, 69, 0.75);
   --clr-blue-600: #5267DF;
   --clr-grey-600: #5B6074;
   --clr-grey-50: #F7F7F7;
+  --clr-stroke: #979797;
   --clr-red-400: #FA5959;
   --default-font-size: 18px;
   --ff: "Rubik", sans-serif;
@@ -264,11 +297,17 @@
   --ls-lg: 0.5px;
   --ls-xl: 1px;
   --ls-xxl: 2px;
-  --spacing: 0;
 }
 body {
   font-family: var(--ff);
   font-size: var(--default-font-size);
+}
+.container {
+  margin-inline: auto;
+  max-width: 100%;
+  @media (width >= 64rem) {
+    max-width: calc(var(--spacing) * 1440);
+  }
 }
 .header__toggle[aria-expanded="false"] {
   background-image: url('../assets/icon-hamburger.svg');
@@ -279,6 +318,63 @@ body {
   background-image: url('../assets/icon-close.svg');
   width: 14.85px;
   height: 14.85px;
+}
+.hero {
+  color: var(--clr-blue-950);
+}
+.hero__figure {
+  width: 311px;
+  height: 206px;
+  scale: 1.2;
+}
+.hero__figure::after {
+  position: absolute;
+  content: "";
+  width: 577px;
+  background-color: var(--clr-blue-600);
+  border-radius: 316.5px;
+  inset: 0;
+  z-index: -1;
+  transform: translateX(45px) translateY(40px);
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+.hero__title {
+  font-size: 30px;
+  font-weight: var(--fw-medium);
+  line-height: 1.35;
+  text-align: center;
+}
+.hero__description {
+  font-size: 15px;
+  font-weight: var(--fw-normal);
+  line-height: 1.6666666667;
+  text-align: center;
+}
+.hero__actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 3);
+}
+.hero__button {
+  border: 1px solid var(--clr-stroke);
+  background-color: var(--clr-grey-50);
+  color: var(--clr-blue-950-75);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  padding: 8px 14px;
+  line-height: 2;
+  cursor: pointer;
+}
+.hero__button:hover {
+  border-color: transparent;
+  background-color: var(--clr-blue-600);
+  color: var(--clr-white);
 }
 @property --tw-rotate-x {
   syntax: "*";

@@ -1,0 +1,13 @@
+.figure::after {
+  position: absolute;
+  content: "";
+  background-color: var(--clr-blue-600);
+  border-radius: 316.5px;
+  inset: 0;
+z-index: -1;
+}
+
+.figure__image {
+  width: 100%;
+  height: auto;
+}

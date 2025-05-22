@@ -1,3 +1,5 @@
+import { initializeTabs } from "./tabs.js";
+
 const $ = (selector) => document.querySelector(selector);
 
 (async () => {
@@ -18,4 +20,6 @@ const $ = (selector) => document.querySelector(selector);
       ? $body.classList.remove("is-expanded")
       : $body.classList.add("is-expanded");
   });
+
+  initializeTabs();
 })();

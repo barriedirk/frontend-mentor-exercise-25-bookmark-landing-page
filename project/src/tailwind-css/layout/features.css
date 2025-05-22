@@ -1,3 +1,19 @@
-.feature {
-  
+.features__title {
+  text-align: center;
+}
+
+.features__description {
+  text-align: center;
+}
+
+.features__figure {
+  width: 254.74px;
+  heigth: 220px;
+  scale: 1;
+  margin-bottom: 40px;
+}
+
+.features__figure::after {
+  width: 577px;
+  transform: translateX(-56%) translateY(27px);
 }

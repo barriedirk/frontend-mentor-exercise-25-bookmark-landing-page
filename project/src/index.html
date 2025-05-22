@@ -107,21 +107,21 @@
     <main class="main">
       <div class="container">
         <section class="hero mt-16" aria-labelledby="hero__title">
-          <figure class="hero__figure m-auto relative">
+          <figure class="figure hero__figure m-auto relative">
             <img
               src="./assets/illustration-hero.svg"
               alt="Illustration of a browser"
-              class="hero__image"
+              class="figure__image hero__image"
               role="presentation"
               aria-hidden="true"
             />
           </figure>
 
-          <h1 class="hero__title mt-24 mb-8" id="hero__title">
+          <h1 class="hero__title section-title mt-24 mb-8" id="hero__title">
             A Simple Bookmark Manager
           </h1>
 
-          <p class="hero__description opacity-50 mb-8">
+          <p class="hero__description section-description opacity-50 mb-8">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
@@ -130,14 +130,14 @@
           <div class="hero__actions">
             <button
               type="button"
-              class="hero__button"
+              class="hero__button button"
               aria-label="Download for Chrome"
             >
               Get it on Chrome
             </button>
             <button
               type="button"
-              class="hero__button"
+              class="hero__button button"
               aria-label="Download for Firefox"
             >
               Get it on Firefox
@@ -146,108 +146,211 @@
         </section>
 
         <section class="features mt-36">
-          <h2>Features</h2>
+          <h2 class="features__title section-title mb-4">Features</h2>
 
-          <p>
+          <p class="features__description section-description opacity-50 mb-4">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
           </p>
 
-          <a>Simple Bookmarking</a>
-          <a>Speedy Searching</a>
-          <a>Easy Sharing</a>
+          <div
+            class="feature_tabs tabs"
+            role="tablist"
+            aria-label="Features of our App"
+          >
+            <div class="tabs__tab-group my-12">
+              <button
+                type="button"
+                class="tabs__tab tabs__tab--active"
+                id="tab-1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+                tabindex="0"
+              >
+                <span>Simple Bookmarking</span>
+              </button>
+              <button
+                type="button"
+                class="tabs__tab"
+                id="tab-2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+                tabindex="-1"
+              >
+                <span>Speedy Searching</span>
+              </button>
+              <button
+                type="button"
+                class="tabs__tab"
+                id="tab-3"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-3"
+                tabindex="-1"
+              >
+                <span>Easy Sharing</span>
+              </button>
+            </div>
+            <div
+              class="tabs__panel tabs__panel--active"
+              id="panel-1"
+              role="tabpanel"
+              aria-labelledby="tab-1"
+            >
+              <figure class="figure features__figure m-auto relative">
+                <img
+                  src="./assets/illustration-features-tab-1.svg"
+                  alt="Illustration of a Bookmark in one click"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center">
+                <h2 class="section-title mb-4">Bookmark in one click</h2>
+                <p class="section-description opacity-50 mb-8">
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
 
-          <h2>Bookmark in one click</h2>
+            <div
+              class="tabs__panel"
+              id="panel-2"
+              role="tabpanel"
+              aria-labelledby="tab-2"
+              aria-hidden="true"
+              hidden
+            >
+              <figure class="figure features__figure m-auto relative">
+                <img
+                  src="./assets/illustration-features-tab-2.svg"
+                  alt="Illustration of a Intelligent search"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center">
+                <h2 class="section-title mb-4">Intelligent search</h2>
+                <p class="section-description opacity-50 mb-8">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
 
-          <p>
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
-          </p>
-
-          <a>More Info</a>
-
-          <h2>Intelligent search</h2>
-
-          <p>
-            Our powerful search feature will help you find saved sites in no
-            time at all. No need to trawl through all of your bookmarks.
-          </p>
-
-          <a>More Info</a>
+            <div
+              class="tabs__panel"
+              id="panel-3"
+              role="tabpanel"
+              aria-labelledby="tab-3"
+              aria-hidden="true"
+              hidden
+            >
+              <figure class="figure features__figure m-auto relative">
+                <img
+                  src="./assets/illustration-features-tab-3.svg"
+                  alt="Illustration of a Share your bookmarks"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center">
+                <h2 class="section-title mb-4">Share your bookmarks</h2>
+                <p class="section-description opacity-50 mb-8">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <h2>Share your bookmarks</h2>
+        <section class="download mt-23">
+          <h2 class="download__title section-title mt-24 mb-8">
+            Download the extension
+          </h2>
 
-        <p>
-          Easily share your bookmarks and collections with others. Create a
-          shareable link that you can send at the click of a button.
-        </p>
+          <p class="download__description section__description opacity-50 mb-8">
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
 
-        <a>More Info</a>
+          <h3 class="download__title section-title mt-24 mb-8">
+            Add to Chrome
+          </h3>
+          <span>Minimum version 62</span>
+          <span>Add & Install Extension</span>
 
-        <h2>Download the extension</h2>
+          <h3 class="download__title section-title mt-24 mb-8">
+            Add to Firefox
+          </h3>
+          <span>Minimum version 55</span>
+          <span>Add & Install Extension</span>
 
-        <p>
-          We’ve got more browsers in the pipeline. Please do let us know if
-          you’ve got a favourite you’d like us to prioritize.
-        </p>
+          <h3 class="download__title section-title mt-24 mb-8">Add to Opera</h3>
+          <span>Minimum version 46</span>
+          <span>Add & Install Extension</span>
+        </section>
 
-        <a>Add to Chrome</a>
-        <span>Minimum version 62</span>
-        <span>Add & Install Extension</span>
+        <section class="qa">
+          <h2 class="qa__title section-title mt-24 mb-8">
+            Frequently Asked Questions
+          </h2>
 
-        <a>Add to Firefox</a>
-        <span>Minimum version 55</span>
-        <span>Add & Install Extension</span>
+          <p class="qa__description section__description opacity-50 mb-8">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
 
-        <a>Add to Opera</a>
-        <span>Minimum version 46</span>
-        <span>Add & Install Extension</span>
+          <!-- Question 1 -->
+          What is Bookmark?
 
-        <h2>Frequently Asked Questions</h2>
+          <!-- Answer 1 -->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+          tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis
+          quam ornare mattis.
 
-        <p>
-          Here are some of our FAQs. If you have any other questions you’d like
-          answered please feel free to email us.
-        </p>
+          <!-- Question 2 -->
+          How can I request a new browser?
 
-        <!-- Question 1 -->
-        What is Bookmark?
+          <!-- Answer 2 -->
+          Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+          ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+          aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+          Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+          Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
 
-        <!-- Answer 1 -->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
-        mattis.
+          <!-- Question 3 -->
+          Is there a mobile app?
 
-        <!-- Question 2 -->
-        How can I request a new browser?
+          <!-- Answer 3 -->
+          Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+          vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
+          quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex
+          et ultricies bibendum.
 
-        <!-- Answer 2 -->
-        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
-        convallis ultricies. Mauris augue massa, ultricies non ligula.
-        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          <!-- Question 4 -->
+          What about other Chromium browsers?
 
-        <!-- Question 3 -->
-        Is there a mobile app?
-
-        <!-- Answer 3 -->
-        Sed consectetur quam id neque fermentum accumsan. Praesent luctus
-        vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
-        quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et
-        ultricies bibendum.
-
-        <!-- Question 4 -->
-        What about other Chromium browsers?
-
-        <!-- Answer 4 -->
-        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi,
-        at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non
-        ut velit. More Info 35,000+ already joined Stay up-to-date with what
-        we’re doing Contact Us Features Pricing Contact
+          <!-- Answer 4 -->
+          Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
+          mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque
+          non ut velit. More Info 35,000+ already joined Stay up-to-date with
+          what we’re doing Contact Us Features Pricing Contact
+        </section>
       </div>
     </main>
     <footer>

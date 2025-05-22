@@ -1,0 +1,18 @@
+.button {
+  border: 1px solid var(--clr-stroke);
+  background-color: var(--clr-grey-50);
+  color: var(--clr-blue-950-75);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: var(--fw-medium);
+  padding: 8px 14px;
+  line-height: 2;
+
+  @apply cursor-pointer;
+}
+
+.button:hover {
+  border-color: transparent;
+  background-color: var(--clr-blue-600);
+  color: var(--clr-white);
+}

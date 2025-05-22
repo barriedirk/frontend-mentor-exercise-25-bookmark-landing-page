@@ -1,14 +1,19 @@
 @import "tailwindcss";
 
-@import "./abstracts/variables.css"; 
+@import "./abstracts/variables.css";
+
 @import "./base/typography.css";
 
 @import "./utilities/container.css";
+@import "./utilities/section";
 
+@import "./components/figure.css";
+@import "./components/button.css";
 @import "./components/button__toggle.css";
- 
+@import "./components/tabs.css";
+
 @import "./layout/hero.css";
 @import "./layout/features.css";
+@import "./layout/download.css";
 
 /* @import "./base/debug.css"; */
-

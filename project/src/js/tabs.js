@@ -60,6 +60,7 @@ export const initializeTabs = () => {
 
     if (newIndex !== null) {
       e.preventDefault();
+
       activateTab(tabs[newIndex]);
     }
   });

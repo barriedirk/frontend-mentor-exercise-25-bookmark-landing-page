@@ -1,9 +1,4 @@
-.download__title {
-  text-align: center;
-  letter-spacing: -0.08px;
-  line-height: 2.1666666667;
-}
-
+.download__title,
 .download__description {
   text-align: center;
 }

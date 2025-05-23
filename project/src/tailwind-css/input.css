@@ -11,9 +11,13 @@
 @import "./components/button.css";
 @import "./components/button__toggle.css";
 @import "./components/tabs.css";
+@import "./components/card.css";
 
 @import "./layout/hero.css";
 @import "./layout/features.css";
 @import "./layout/download.css";
+@import "./layout/faq.css";
+@import "./layout/form.css";
+@import "./layout/footer.css";
 
 /* @import "./base/debug.css"; */

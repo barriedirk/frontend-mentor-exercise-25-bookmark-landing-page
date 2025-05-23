@@ -1,0 +1,13 @@
+.footer {
+  color: var(--clr-white);
+  background-color: var(--clr-blue-950);
+}
+
+.footer__bookmark {
+}
+
+.footer__attribution {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}

@@ -2,16 +2,17 @@
   --clr-white: #ffffff;
   --clr-black: #000000;
 
-  --clr-blue-950: #242A45;
+  --clr-blue-950: #242a45;
   --clr-blue-950-75: rgba(36, 42, 69, 0.75);
-  --clr-blue-600: #5267DF;
+  --clr-blue-950-14: rgba(36, 42, 69, 0.14);
+  --clr-blue-600: #5267df;
 
-  --clr-grey-600: #5B6074;
-  --clr-grey-50: #F7F7F7;
+  --clr-grey-600: #5b6074;
+  --clr-grey-50: #f7f7f7;
 
   --clr-stroke: #979797;
 
-  --clr-red-400: #FA5959;
+  --clr-red-400: #fa5959;
 
   --default-font-size: 18px;
 

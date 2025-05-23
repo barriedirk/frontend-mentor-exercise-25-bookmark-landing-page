@@ -11,6 +11,7 @@
   @apply cursor-pointer;
 }
 
+.button--active,
 .button:hover {
   border-color: transparent;
   background-color: var(--clr-blue-600);

@@ -444,7 +444,6 @@ body {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   height: auto;
-  overflow: hidden;
   pointer-events: none;
 }
 .tabs__panel--active {
@@ -472,6 +471,8 @@ body {
 }
 .hero {
   color: var(--clr-blue-950);
+  overflow: hidden;
+  width: 100%;
 }
 .hero__figure {
   width: 311px;

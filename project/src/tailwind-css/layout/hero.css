@@ -1,5 +1,7 @@
 .hero {
   color: var(--clr-blue-950);
+  overflow: hidden;
+  width: 100%;
 }
 
 .hero__figure {

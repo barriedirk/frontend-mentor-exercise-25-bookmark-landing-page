@@ -1,4 +1,5 @@
 import { initializeTabs } from "./tabs.js";
+import { initializeForm } from "./form.js";
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -22,4 +23,5 @@ const $ = (selector) => document.querySelector(selector);
   });
 
   initializeTabs();
+  initializeForm();
 })();

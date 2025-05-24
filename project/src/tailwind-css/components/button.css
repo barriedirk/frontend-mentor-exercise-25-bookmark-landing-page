@@ -17,3 +17,10 @@
   background-color: var(--clr-blue-600);
   color: var(--clr-white);
 }
+
+.button--alternative,
+.button--alternative:hover {
+  border-color: transparent;
+  background-color: var(--clr-red-400);
+  color: var(--clr-white);
+}

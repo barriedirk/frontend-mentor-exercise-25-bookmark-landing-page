@@ -52,14 +52,14 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body class="bg-white">
-    <header id="header" class="header pt-[45px] px-[28px]" role="banner">
-      <div class="container flex flex-row justify-between align-middle">
+    <header id="header" class="header" role="banner">
+      <div
+        class="container pt-[45px] px-[20px] flex flex-row justify-between align-middle"
+      >
         <a href="/" class="header__logo" aria-label="Go to homepage">
-          <img
-            class="w-[148px] h-[25px]"
-            src="./assets/logo-bookmark.svg"
-            alt="Bookmark logo"
-          />
+          <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
+            <use href="./assets/logo-bookmark.svg#icon-logo" />
+          </svg>
         </a>
 
         <nav
@@ -104,9 +104,9 @@
         </nav>
       </div>
     </header>
-    <main class="main pt-[45px] px-[28px]">
-      <div class="container">
-        <section class="hero mt-16" aria-labelledby="hero__title">
+    <main class="main">
+      <section id="hero" class="hero mt-16" aria-labelledby="hero__title">
+        <div class="container pt-[45px] px-[20px]">
           <figure class="figure hero__figure m-auto relative">
             <img
               src="./assets/illustration-hero.svg"
@@ -143,9 +143,11 @@
               Get it on Firefox
             </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="features mt-36">
+      <section id="features" class="features mt-36">
+        <div class="container pt-[45px] px-[20px]">
           <h2 class="features__title section-title mb-4">Features</h2>
 
           <p class="features__description section-description opacity-50 mb-4">
@@ -276,9 +278,15 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="download mt-23" aria-labelledby="download_heading">
+      <section
+        id="pricing"
+        class="download mt-23"
+        aria-labelledby="download_heading"
+      >
+        <div class="container pt-[45px] px-[20px]">
           <h2
             id="download_heading"
             class="download__title section-title mt-24 mb-8"
@@ -381,13 +389,15 @@
               >
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section
-          class="faq mt-23 flex flex-col items-center justify-center"
-          aria-labelledby="faq_heading"
-          aria-describedby="faq_description"
-        >
+      <section
+        class="faq mt-23 flex flex-col items-center justify-center"
+        aria-labelledby="faq_heading"
+        aria-describedby="faq_description"
+      >
+        <div class="container pt-[45px] px-[20px]">
           <h2 id="faq_heading" class="faq__title section-title mb-8">
             Frequently Asked Questions
           </h2>
@@ -453,32 +463,47 @@
               </p>
             </details>
           </div>
-          <a href="#" class="button button--active mt-12">More Info</a>
-        </section>
+          <div class="mt-12 text-center">
+            <a href="#" class="button button--active inline-block">More Info</a>
+          </div>
+        </div>
+      </section>
 
-        <section class="form mt-23">
-          <h2>35,000+ already joined</h2>
+      <section id="contact" class="form mt-23">
+        <div class="container py-[45px] px-[20px]">
+          <h2 class="form__subtitle mb-2">35,000+ already joined</h2>
+          <h3 class="form__title mb-7">
+            Stay up-to-date with what we’re doing
+          </h3>
 
-          <h3>Stay up-to-date with what we’re doing</h3>
-
-          <form>
-            <input type="text" placeholder="Enter your email address" />
-            <button type="button">Contact Us</button>
+          <form method="POST" novalidate>
+            <div class="form__group mb-4">
+              <input
+                class="form__input"
+                type="email"
+                required
+                placeholder="Enter your email address"
+              />
+              <span class="error-message">
+                Whoops, make sure it’s an email</span
+              >
+            </div>
+            <button
+              type="submit"
+              class="form__button button button--alternative"
+            >
+              Contact Us
+            </button>
           </form>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="container flex flex-col items-center justify-center">
+      <div class="container pt-[45px] px-[20px]">
         <a href="/" class="footer__logo" aria-label="Go to homepage">
-          <svg width="148" height="25">
-            <use href="./assets/logo-bookmark.svg" />
+          <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
+            <use href="./assets/logo-bookmark.svg#icon-logo" />
           </svg>
-          <!-- <img
-            class="w-[148px] h-[25px]"
-            src="./assets/logo-bookmark.svg"
-            alt="Bookmark logo"
-          /> -->
         </a>
         <nav class="footer__nav" aria-label="Main navigation">
           <ul class="footer__nav-list" role="menu">
@@ -493,29 +518,42 @@
               >
             </li>
             <li class="footer__nav-item" role="none">
-              <a href="#contact" class="header__nav-link" role="menuitem"
+              <a href="#contact" class="footer__nav-link" role="menuitem"
                 >Contact</a
               >
             </li>
           </ul>
         </nav>
         <ul
-          class="footer__social-network flex flex-row items-center justify-center gap-5"
+          class="footer__social-network flex flex-row items-center justify-center gap-10"
         >
           <li class="footer__social-network">
-            <a href="#" class="footer__social-network-item">
+            <a
+              href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+              target="_blank"
+              class="footer__social-network-item"
+              rel="noopener"
+              aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+            >
               <img src="./assets/icon-facebook.svg" alt="Facebook icon" />
             </a>
           </li>
           <li>
-            <a href="#" class="footer__social-network-item">
+            <a
+              href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+              target="_blank"
+              target="_blank"
+              class="footer__social-network-item"
+              rel="noopener"
+              aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+            >
               <img src="./assets/icon-twitter.svg" alt="Twitter icon" />
             </a>
           </li>
         </ul>
       </div>
 
-      <div class="footer__attribution">
+      <div class="footer__attribution pt-10 pb-8">
         Challenge by
         <a
           href="https://www.frontendmentor.io/profile/barriedirk/solutions"

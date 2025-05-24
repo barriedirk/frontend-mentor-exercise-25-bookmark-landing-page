@@ -3,11 +3,37 @@
   background-color: var(--clr-blue-950);
 }
 
-.footer__bookmark {
+.footer .logo {
+  color: var(--clr-white);
+}
+
+.footer__nav-list,
+.footer__nav,
+.footer > .container {
+  @apply flex flex-col items-center justify-center gap-8;
+}
+
+.footer > .container {
+  @apply gap-11;
+}
+
+.footer__nav-list {
+  @apply gap-4;
+}
+
+.footer__nav-link {
+  font-size: 15px;
+  line-heigth: 1.1333333333;
+  letter-spacing: 1.73px;
+  font-weigth: var(--fw-normal);
 }
 
 .footer__attribution {
   text-align: center;
   font-size: 12px;
-  padding: 10px;
+}
+
+.footer__nav-link {
+  color: var(--clr-white);
+  text-transform: uppercase;
 }

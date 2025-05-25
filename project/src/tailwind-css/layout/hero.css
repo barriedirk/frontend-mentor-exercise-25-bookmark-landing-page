@@ -5,14 +5,16 @@
 }
 
 .hero__figure {
-  width: 311px;
-  height: 206px;
+  min-width: 311px;
+  height: auto;
+  ratio-aspect: 311 / 206;
   scale: 1.2;
 }
 
 .hero__figure::after {
   width: 577px;
-  transform: translateX(45px) translateY(40px);
+  height: 170px;
+  transform: translateX(74px) translateY(64px);
 }
 
 .hero__title {
@@ -21,8 +23,38 @@
 
 .hero__description {
   text-align: center;
+  margin-inline: auto;
+  transition: width 0.5s ease-in-out;
 }
 
 .hero__actions {
   @apply flex flex-row justify-center items-center gap-3;
+}
+
+@media screen and (min-width: 25em) {
+  .hero__figure::after {
+    height: 68%;
+    width: 120%;
+    max-width: 1000px;
+    max-height: 300px;
+    transform: translateX(110px) translateY(40%);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .hero__figure {
+    max-width: 578px;
+    ratio-aspect: 578 / 385;
+    scale: 1.2;
+  }
+
+  .hero__figure::after {
+    width: 1000px;
+    height: 300px;
+    transform: translateX(110px) translateY(120px);
+  }
+
+  .hero__description {
+    max-width: 47ch;
+  }
 }

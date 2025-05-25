@@ -2,3 +2,16 @@
 .download__description {
   text-align: center;
 }
+
+@media screen and (min-width: 48em) {
+  .download__title {
+    font-size: 32px;
+    line-height: 1.625;
+    letter-spacing: -0.1px;
+  }
+
+  .download__description {
+    max-width: 47ch;
+    margin-inline: auto;
+  }
+}

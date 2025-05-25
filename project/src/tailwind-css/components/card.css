@@ -4,6 +4,8 @@
   padding: 30px;
   box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.05);
   width: 100%;
+
+  transition: padding 0.5s ease-in-out;
 }
 
 .card__separator {
@@ -14,4 +16,55 @@
   background-size: cover;
 
   @apply my-5;
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    padding: 20px;
+  }
+
+  .card__figure {
+    width: 72.44px;
+    height: 100%;
+    aspect-ratio: 72.44 / 71.16;
+  }
+
+  .card .button,
+  .card__title,
+  .card__description {
+    letter-spacing: 0.25px;
+    line-height: 2;
+    white-space: nowrap;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__description {
+    font-size: 14px;
+  }
+
+  .card .button {
+    font-size: 12px;
+  }
+
+  .card__separator {
+    @apply my-3;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .card {
+    padding: 10px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card .button,
+  .card__description {
+    font-size: 14px;
+  }
 }

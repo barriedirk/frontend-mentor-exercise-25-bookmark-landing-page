@@ -7,5 +7,6 @@ export default {
     "postcss-mixins": {},
     "postcss-functions": {},
     "postcss-simple-vars": {},
+    "postcss-custom-properties": {},
   },
 };

@@ -1,3 +1,9 @@
+.section-title,
+.section-subtitle,
+.section-description {
+  transition: font-size 0.5s ease-in-out, line-height 0.5s ease-in-out;
+}
+
 .section-title {
   font-size: 30px;
   font-weight: var(--fw-medium);
@@ -14,4 +20,17 @@
   font-size: 15px;
   font-weight: var(--fw-normal);
   line-height: 1.6666666667;
+}
+
+@media screen and (min-width: 48em) {
+  .section-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .section-description {
+    font-size: 18px;
+    font-weight: var(--fw-normal);
+    line-height: 1.5555555556;
+  }
 }

@@ -54,7 +54,7 @@
   <body class="bg-white">
     <header id="header" class="header" role="banner">
       <div
-        class="container pt-[45px] px-[20px] flex flex-row justify-between align-middle"
+        class="container pt-11 px-5 md:px-22 flex flex-row justify-between items-center"
       >
         <a href="/" class="header__logo" aria-label="Go to homepage">
           <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
@@ -63,7 +63,7 @@
         </a>
 
         <nav
-          class="header__nav flex flex-row justify-center align-middle"
+          class="header__nav flex flex-row justify-center items-center"
           aria-label="Main navigation"
         >
           <button
@@ -105,13 +105,13 @@
       </div>
     </header>
     <main class="main">
-      <section id="hero" class="hero mt-16" aria-labelledby="hero__title">
-        <div class="container pt-[45px] px-[20px]">
+      <section id="hero" class="hero mt-9" aria-labelledby="hero__title">
+        <div class="container pt-11 px-5 md:px-22">
           <figure class="figure hero__figure m-auto relative">
             <img
               src="./assets/illustration-hero.svg"
               alt="Illustration of a browser"
-              class="figure__image hero__image"
+              class="figure__image hero__image transition-all duration-700 ease-in-out scale-90 md:scale-100"
               role="presentation"
               aria-hidden="true"
             />
@@ -147,7 +147,7 @@
       </section>
 
       <section id="features" class="features mt-36">
-        <div class="container pt-[45px] px-[20px]">
+        <div class="container pt-11 px-5 md:px-22">
           <h2 class="features__title section-title mb-4">Features</h2>
 
           <p class="features__description section-description opacity-50 mb-4">
@@ -212,8 +212,10 @@
                 />
               </figure>
               <div class="tabs__contain text-center">
-                <h2 class="section-title mb-4">Bookmark in one click</h2>
-                <p class="section-description opacity-50 mb-8">
+                <h2 class="section-title tab__title mb-4">
+                  Bookmark in one click
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
@@ -240,8 +242,10 @@
                 />
               </figure>
               <div class="tabs__contain text-center">
-                <h2 class="section-title mb-4">Intelligent search</h2>
-                <p class="section-description opacity-50 mb-8">
+                <h2 class="section-title tab__title mb-4">
+                  Intelligent search
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
                   Our powerful search feature will help you find saved sites in
                   no time at all. No need to trawl through all of your
                   bookmarks.
@@ -268,8 +272,10 @@
                 />
               </figure>
               <div class="tabs__contain text-center">
-                <h2 class="section-title mb-4">Share your bookmarks</h2>
-                <p class="section-description opacity-50 mb-8">
+                <h2 class="section-title tab__title mb-4">
+                  Share your bookmarks
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
                   Easily share your bookmarks and collections with others.
                   Create a shareable link that you can send at the click of a
                   button.
@@ -286,24 +292,24 @@
         class="download mt-23"
         aria-labelledby="download_heading"
       >
-        <div class="container pt-[45px] px-[20px]">
+        <div class="container pt-11 px-5 md:px-22">
           <h2
             id="download_heading"
-            class="download__title section-title mt-24 mb-8"
+            class="section-title download__title mt-24 md:mt-10 mb-8"
           >
             Download the extension
           </h2>
 
           <p
             id="download_description"
-            class="download__description section-description opacity-50 mb-8"
+            class="section-description download__description opacity-50 mb-8"
           >
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
 
           <div
-            class="cards flex flex-col items-center justify-center gap-2"
+            class="cards flex flex-col sm:flex-row items-center justify-center gap-2"
             role="list"
           >
             <div
@@ -321,11 +327,13 @@
               </figure>
               <h3
                 id="card_chrome"
-                class="download__title section-subtitle mt-9 mb-7"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
               >
                 Add to Chrome
               </h3>
-              <span id="chrome_version" class="section-description opacity-50"
+              <span
+                id="chrome_version"
+                class="section-description card__description opacity-50"
                 >Minimum version 62</span
               >
               <hr class="card__separator" />
@@ -349,11 +357,13 @@
               </figure>
               <h3
                 id="card_firefox"
-                class="download__title section-subtitle mt-9 mb-7"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
               >
                 Add to Firefox
               </h3>
-              <span id="firefox_version" class="section-description opacity-50"
+              <span
+                id="firefox_version"
+                class="section-description card__description opacity-50"
                 >Minimum version 55</span
               >
               <hr class="card__separator" />
@@ -376,11 +386,11 @@
               </figure>
               <h3
                 id="card_opera"
-                class="download__title section-subtitle mt-9 mb-7"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
               >
                 Add to Opera
               </h3>
-              <span class="section-description opacity-50"
+              <span class="section-description card__description opacity-50"
                 >Minimum version 46</span
               >
               <hr class="card__separator" />
@@ -397,14 +407,14 @@
         aria-labelledby="faq_heading"
         aria-describedby="faq_description"
       >
-        <div class="container pt-[45px] px-[20px]">
-          <h2 id="faq_heading" class="faq__title section-title mb-8">
+        <div class="container pt-11 px-5 md:px-22">
+          <h2 id="faq_heading" class="section__title faq__title mb-8">
             Frequently Asked Questions
           </h2>
 
           <p
-            id="faq_description"
-            class="faq__description section-description opacity-50 mb-8"
+            id="faq__description"
+            class="section__description faq__description opacity-50 mb-8"
           >
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
@@ -470,13 +480,13 @@
       </section>
 
       <section id="contact" class="form mt-23">
-        <div class="container py-[45px] px-[20px]">
+        <div class="container py-[45px] px-5 md:px-22">
           <h2 class="form__subtitle mb-2">35,000+ already joined</h2>
           <h3 class="form__title mb-7">
             Stay up-to-date with what we’re doing
           </h3>
 
-          <form method="POST" novalidate>
+          <form class="form-email" method="POST" novalidate>
             <div class="form__group mb-4">
               <input
                 class="form__input"
@@ -499,7 +509,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container pt-[45px] px-[20px]">
+      <div class="container pt-11 px-5 md:px-22">
         <a href="/" class="footer__logo" aria-label="Go to homepage">
           <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
             <use href="./assets/logo-bookmark.svg#icon-logo" />
@@ -525,7 +535,7 @@
           </ul>
         </nav>
         <ul
-          class="footer__social-network flex flex-row items-center justify-center gap-10"
+          class="footer__social-network flex flex-row items-center justify-center gap-10 sm:gap-5"
         >
           <li class="footer__social-network">
             <a

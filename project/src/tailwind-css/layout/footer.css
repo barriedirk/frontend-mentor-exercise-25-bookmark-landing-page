@@ -37,3 +37,20 @@
   color: var(--clr-white);
   text-transform: uppercase;
 }
+
+@media screen and (min-width: 40em) {
+  .footer__nav-list,
+  .footer__nav,
+  .footer > .container {
+    @apply flex-row;
+  }
+
+  .footer__nav-link {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .footer > .container {
+    @apply justify-between;
+  }
+}

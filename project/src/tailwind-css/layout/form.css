@@ -23,10 +23,11 @@
 
 .form__group {
   position: relative;
+  flex: 1;
 }
 
 .form__input {
-  padding: 10px;
+  padding: 11px;
   background-color: var(--clr-white);
   color: var(--clr-black);
   font-size: 15px;
@@ -74,4 +75,26 @@
 
 .form__button {
   width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .form .container {
+    max-width: 54ch;
+  }
+
+  .form__title {
+    font-size: 32px;
+  }
+
+  .form__subtitle {
+    font-size: 13px;
+  }
+
+  .form-email {
+    @apply flex flex-row items-start gap-3;
+  }
+
+  .form__button {
+    flex: 0 0 126px;
+  }
 }

@@ -4,8 +4,8 @@
 
 @import "./base/typography.css";
 
-@import "./utilities/container.css";
 @import "./utilities/section";
+@import "./utilities/container.css";
 
 @import "./components/figure.css";
 @import "./components/button.css";

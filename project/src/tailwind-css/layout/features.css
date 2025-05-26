@@ -76,3 +76,23 @@
     transform: translateX(-50%) translateY(20%);
   }
 }
+
+@media screen and (min-width: 90em) {
+  .features__figure::after {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 90%,
+      black 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 90%,
+      black 100%
+    );
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

@@ -1,3 +1,9 @@
 .container {
-  @apply mx-auto max-w-full lg:max-w-1440;
+  @apply mx-auto max-w-full;
+}
+
+@media screen and (min-width: 75em) {
+  .container {
+    max-width: 1200px;
+  }
 }

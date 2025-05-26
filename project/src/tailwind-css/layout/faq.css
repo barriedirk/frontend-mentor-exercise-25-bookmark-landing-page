@@ -63,3 +63,10 @@
     font-size: 16px;
   }
 }
+
+@media screen and (min-width: 50em) {
+  .faq__list {
+    max-width: 47ch;
+    margin-inline: auto;
+  }
+}

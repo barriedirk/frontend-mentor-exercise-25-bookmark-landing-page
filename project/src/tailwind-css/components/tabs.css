@@ -2,6 +2,14 @@
   padding: 5px 0;
 }
 
+.tabs__header {
+  grid-area: tabs__header;
+}
+
+.tabs__contain {
+  grid-area: tabs__contain;
+}
+
 .tabs__tab-group {
   @apply relative flex flex-col justify-center;
 }
@@ -106,5 +114,19 @@
 
   .tabs__panel {
     padding-inline: 0;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .tabs__panel {
+    display: grid;
+    grid-template-areas: "tabs__header tabs__contain";
+    gap: 50px;
+    align-items: center;
+    /* grid-auto-rows: 560px; */
+  }
+
+  .tab__description {
+    margin-inline: 0;
   }
 }

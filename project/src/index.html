@@ -76,7 +76,7 @@
             <span class="sr-only">Open/Close Menu</span>
           </button>
 
-          <ul id="header-menu" class="header__nav-list hidden" role="menu">
+          <ul id="header-menu" class="header__nav-list" role="menu">
             <li class="header__nav-item" role="none">
               <a href="#features" class="header__nav-link" role="menuitem"
                 >Features</a
@@ -105,8 +105,12 @@
       </div>
     </header>
     <main class="main">
-      <section id="hero" class="hero mt-9" aria-labelledby="hero__title">
-        <div class="container pt-11 px-5 md:px-22">
+      <section
+        id="hero"
+        class="hero mt-9 sm:mt-26"
+        aria-labelledby="hero__title"
+      >
+        <div class="container pt-11 sm:pt-1 px-5 md:px-22">
           <figure class="figure hero__figure m-auto relative">
             <img
               src="./assets/illustration-hero.svg"
@@ -117,36 +121,38 @@
             />
           </figure>
 
-          <h1 class="hero__title section-title mt-24 mb-8" id="hero__title">
-            A Simple Bookmark Manager
-          </h1>
+          <div class="hero__content">
+            <h1 class="hero__title section-title mt-24 mb-8" id="hero__title">
+              A Simple Bookmark Manager
+            </h1>
 
-          <p class="hero__description section-description opacity-50 mb-8">
-            A clean and simple interface to organize your favourite websites.
-            Open a new browser tab and see your sites load instantly. Try it for
-            free.
-          </p>
+            <p class="hero__description section-description opacity-50 mb-8">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
 
-          <div class="hero__actions">
-            <button
-              type="button"
-              class="hero__button button"
-              aria-label="Download for Chrome"
-            >
-              Get it on Chrome
-            </button>
-            <button
-              type="button"
-              class="hero__button button"
-              aria-label="Download for Firefox"
-            >
-              Get it on Firefox
-            </button>
+            <div class="hero__actions">
+              <button
+                type="button"
+                class="hero__button button"
+                aria-label="Download for Chrome"
+              >
+                Get it on Chrome
+              </button>
+              <button
+                type="button"
+                class="hero__button button"
+                aria-label="Download for Firefox"
+              >
+                Get it on Firefox
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="features" class="features mt-36">
+      <section id="features" class="features mt-36 sm:mt-10">
         <div class="container pt-11 px-5 md:px-22">
           <h2 class="features__title section-title mb-4">Features</h2>
 
@@ -196,13 +202,16 @@
                 <span>Easy Sharing</span>
               </button>
             </div>
+
             <div
               class="tabs__panel tabs__panel--active"
               id="panel-1"
               role="tabpanel"
               aria-labelledby="tab-1"
             >
-              <figure class="figure features__figure m-auto relative">
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
                 <img
                   src="./assets/illustration-features-tab-1.svg"
                   alt="Illustration of a Bookmark in one click"
@@ -211,7 +220,7 @@
                   aria-hidden="true"
                 />
               </figure>
-              <div class="tabs__contain text-center">
+              <div class="tabs__contain text-center lg:text-left">
                 <h2 class="section-title tab__title mb-4">
                   Bookmark in one click
                 </h2>
@@ -232,7 +241,9 @@
               aria-hidden="true"
               hidden
             >
-              <figure class="figure features__figure m-auto relative">
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
                 <img
                   src="./assets/illustration-features-tab-2.svg"
                   alt="Illustration of a Intelligent search"
@@ -241,7 +252,7 @@
                   aria-hidden="true"
                 />
               </figure>
-              <div class="tabs__contain text-center">
+              <div class="tabs__contain text-center lg:text-left">
                 <h2 class="section-title tab__title mb-4">
                   Intelligent search
                 </h2>
@@ -262,7 +273,9 @@
               aria-hidden="true"
               hidden
             >
-              <figure class="figure features__figure m-auto relative">
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
                 <img
                   src="./assets/illustration-features-tab-3.svg"
                   alt="Illustration of a Share your bookmarks"
@@ -271,7 +284,7 @@
                   aria-hidden="true"
                 />
               </figure>
-              <div class="tabs__contain text-center">
+              <div class="tabs__contain text-center lg:text-left">
                 <h2 class="section-title tab__title mb-4">
                   Share your bookmarks
                 </h2>
@@ -309,7 +322,7 @@
           </p>
 
           <div
-            class="cards flex flex-col sm:flex-row items-center justify-center gap-2"
+            class="cards flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-6"
             role="list"
           >
             <div
@@ -403,7 +416,7 @@
       </section>
 
       <section
-        class="faq mt-23 flex flex-col items-center justify-center"
+        class="faq mt-23 lg:mt-40 flex flex-col items-center justify-center"
         aria-labelledby="faq_heading"
         aria-describedby="faq_description"
       >
@@ -509,7 +522,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container pt-11 px-5 md:px-22">
+      <div class="container pt-11 px-5">
         <a href="/" class="footer__logo" aria-label="Go to homepage">
           <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
             <use href="./assets/logo-bookmark.svg#icon-logo" />
@@ -537,7 +550,7 @@
         <ul
           class="footer__social-network flex flex-row items-center justify-center gap-10 sm:gap-5"
         >
-          <li class="footer__social-network">
+          <li class="footer__social-network-item">
             <a
               href="https://www.frontendmentor.io/profile/barriedirk/solutions"
               target="_blank"
@@ -548,7 +561,7 @@
               <img src="./assets/icon-facebook.svg" alt="Facebook icon" />
             </a>
           </li>
-          <li>
+          <li class="footer__social-network-item">
             <a
               href="https://www.frontendmentor.io/profile/barriedirk/solutions"
               target="_blank"

@@ -24,3 +24,14 @@
   background-color: var(--clr-red-400);
   color: var(--clr-white);
 }
+
+.button--red {
+  background-color: var(--clr-white);
+  color: var(--clr-red-400);
+  border: 1px solid var(--clr-grey-50);
+}
+
+.button--red:hover {
+  background-color: var(--clr-red-400);
+  color: var(--clr-white);
+}

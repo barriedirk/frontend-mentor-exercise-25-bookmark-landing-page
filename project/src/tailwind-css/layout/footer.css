@@ -54,3 +54,15 @@
     @apply justify-between;
   }
 }
+
+@media screen and (min-width: 62em) {
+  .footer .container {
+    justify-content: flex-start;
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+
+  .footer__social-network {
+    margin-left: auto;
+  }
+}

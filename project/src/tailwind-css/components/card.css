@@ -68,3 +68,22 @@
     font-size: 14px;
   }
 }
+
+@media screen and (min-width: 62.5em) {
+  .card {
+    flex: 0 0 280px;
+    padding-block: 30px;
+  }
+
+  .cards .card:nth-child(2) {
+    transform: translateY(20%);
+  }
+
+  .cards .card:nth-child(3) {
+    transform: translateY(40%);
+  }
+
+  .cards .button {
+    padding-inline: 30px;
+  }
+}

@@ -5,6 +5,14 @@
 }
 
 .hero__figure {
+  grid-area: hero__figure;
+}
+
+.hero__content {
+  grid-area: hero__content;
+}
+
+.hero__figure {
   min-width: 311px;
   height: auto;
   ratio-aspect: 311 / 206;
@@ -56,5 +64,30 @@
 
   .hero__description {
     max-width: 47ch;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .hero > .container {
+    display: grid;
+    grid-template-areas: "hero__content hero__figure";
+    gap: 50px;
+    align-items: center;
+    grid-auto-rows: 560px;
+  }
+
+  .hero__title {
+    margin-top: 0;
+  }
+
+  .hero__description,
+  .hero__title {
+    text-align: left;
+    margin-inline: 0;
+    max-width: 48ch;
+  }
+
+  .hero__actions {
+    justify-content: flex-start;
   }
 }

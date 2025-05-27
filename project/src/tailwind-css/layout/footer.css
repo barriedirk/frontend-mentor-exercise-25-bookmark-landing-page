@@ -4,7 +4,9 @@
 }
 
 .footer .logo {
-  color: var(--clr-white);
+  --logo-text-color: var(--clr-white);
+  --logo-circle-color: var(--clr-blue-600);
+  --logo-icon-color: var(--clr-white);
 }
 
 .footer__nav-list,

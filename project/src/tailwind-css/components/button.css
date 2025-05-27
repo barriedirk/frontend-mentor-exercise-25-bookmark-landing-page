@@ -12,14 +12,18 @@
 }
 
 .button--active,
-.button:hover {
+.button:hover,
+.button:active,
+.button:focus-visible {
   border-color: transparent;
   background-color: var(--clr-blue-600);
   color: var(--clr-white);
 }
 
 .button--alternative,
-.button--alternative:hover {
+.button--alternative:hover,
+.button--alternative:active,
+.button--alternative:focus-visible {
   border-color: transparent;
   background-color: var(--clr-red-400);
   color: var(--clr-white);
@@ -31,7 +35,9 @@
   border: 1px solid var(--clr-grey-50);
 }
 
-.button--red:hover {
+.button--red:hover,
+.button--red:active,
+.button--red:focus-visible {
   background-color: var(--clr-red-400);
   color: var(--clr-white);
 }

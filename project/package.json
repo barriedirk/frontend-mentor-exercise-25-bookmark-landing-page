@@ -3,8 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "watch:css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css --watch",
     "http": "http-server src/",
+    "watch:css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css --watch",
     "build-css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css",
     "build": "bun run export.ts",
     "copy-dist": "cp -R dist/ ../",

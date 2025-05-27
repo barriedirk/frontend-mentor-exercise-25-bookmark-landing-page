@@ -15,7 +15,7 @@
 .hero__figure {
   min-width: 311px;
   height: auto;
-  ratio-aspect: 311 / 206;
+  aspect-ratio: 311 / 206;
   scale: 1.2;
 }
 
@@ -52,8 +52,9 @@
 @media screen and (min-width: 48em) {
   .hero__figure {
     max-width: 578px;
-    ratio-aspect: 578 / 385;
+    aspect-ratio: 578 / 385;
     scale: 1.2;
+    transform: translateY(20px);
   }
 
   .hero__figure::after {
@@ -68,6 +69,10 @@
 }
 
 @media screen and (min-width: 75em) {
+  .hero__figure {
+    transform: translateY(0);
+  }
+
   .hero > .container {
     display: grid;
     grid-template-areas: "hero__content hero__figure";

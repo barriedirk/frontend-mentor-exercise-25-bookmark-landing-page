@@ -112,21 +112,20 @@
     margin-inline: auto;
   }
 
+  .tab__description {
+    margin-inline: 0;
+  }
+
   .tabs__panel {
     padding-inline: 0;
   }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 59.375em) {
   .tabs__panel {
     display: grid;
     grid-template-areas: "tabs__header tabs__contain";
     gap: 50px;
     align-items: center;
-    /* grid-auto-rows: 560px; */
-  }
-
-  .tab__description {
-    margin-inline: 0;
   }
 }

@@ -30,10 +30,10 @@ const htmlFile = "./src/index.html";
 let htmlContent = fs.readFileSync(htmlFile, "utf-8");
 
 // Remove the live-reload script
-htmlContent = htmlContent.replace(
-  /<script[^>]*>[\s\S]*?<\/script>/g, // Matches any <script> tag and its content
-  ""
-);
+// htmlContent = htmlContent.replace(
+//   /<script[^>]*>[\s\S]*?<\/script>/g, // Matches any <script> tag and its content
+//   ""
+// );
 
 // Write the cleaned HTML to dist
 fs.writeFileSync(path.join(distDir, "index.html"), htmlContent);

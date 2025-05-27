@@ -5,7 +5,10 @@
   "scripts": {
     "watch:css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css --watch",
     "http": "http-server src/",
-    "build": "bun run export.ts"
+    "build-css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css",
+    "build": "bun run export.ts",
+    "copy-dist": "cp -R dist/ ../",
+    "deploy": "bun run build-css && bun run build && bun run copy-dist"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.7",

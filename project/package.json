@@ -8,7 +8,8 @@
     "build-css": "bunx @tailwindcss/cli -i ./src/tailwind-css/input.css -o ./src/css/main.css",
     "build": "bun run export.ts",
     "copy-dist": "cp -R dist/ ../",
-    "deploy": "bun run build-css && bun run build && bun run copy-dist"
+    "deploy": "bun run build-css && bun run build && bun run copy-dist",
+    "deploy:gh": "gh-pages -d dist"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.1.7",

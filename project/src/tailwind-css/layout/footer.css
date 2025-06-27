@@ -23,21 +23,39 @@
   @apply gap-4;
 }
 
-.footer__nav-link {
-  font-size: 15px;
-  line-heigth: 1.1333333333;
-  letter-spacing: 1.73px;
-  font-weigth: var(--fw-normal);
-}
-
 .footer__attribution {
   text-align: center;
   font-size: 12px;
 }
 
 .footer__nav-link {
+  font-size: 15px;
+  line-heigth: 1.1333333333;
+  letter-spacing: 1.73px;
+  font-weigth: var(--fw-normal);
   color: var(--clr-white);
   text-transform: uppercase;
+}
+
+.footer__nav-link:is(:hover, :active, :focus-visible) {
+  color: var(--clr-red-400); 
+}
+
+.icon-facebook {
+  color: var(--clr-white);
+  width: 24px;
+  height: 24px;
+}
+
+.icon-twitter {
+  color: var(--clr-white);
+  width: 24px;
+  height: 20px;
+}
+
+.icon-facebook:is(:hover, :active, :focus-visible),
+.icon-twitter:is(:hover, :active, :focus-visible){
+  color: var(--clr-red-400);
 }
 
 @media screen and (min-width: 40em) {

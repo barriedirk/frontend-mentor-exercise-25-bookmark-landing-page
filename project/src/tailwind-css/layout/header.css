@@ -16,15 +16,11 @@
   transition: color 0.5s;
 }
 
-.header__nav-item:hover,
-.header__nav-item:active,
-.header__nav-item:focus-visible {
+.header__nav-item:is(:hover,:active,:focus-visible) {
   color: var(--clr-red-400);
 }
 
-.header__nav-link--login:hover,
-.header__nav-link--login:active,
-.header__nav-link--login:focus-visible {
+.header__nav-link--login:is(:hover,:active,:focus-visible) {
   background-color: var(--clr-red-400);
   color: var(--clr-white);
 }
@@ -137,9 +133,15 @@
 
   .header__nav-link--login {
     padding: 4px 22px;
+    background-color: var(--clr-red-400);
+    color: var(--clr-white);
+    border: 1px solid var(--clr-red-400);
+    box-shadow: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
+  }
+
+  .header__nav-link--login:is(:hover,:active,:focus-visible) {
     background-color: var(--clr-white);
     color: var(--clr-red-400);
-    border: 1px solid var(--clr-red-400);
   }
 }
 

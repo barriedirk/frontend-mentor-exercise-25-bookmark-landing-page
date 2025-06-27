@@ -1,33 +1,50 @@
 .button {
   border: 1px solid var(--clr-stroke);
-  background-color: var(--clr-grey-50);
-  color: var(--clr-blue-950-75);
+  background-color: var(--clr-blue-600);
+  color: var(--clr-white);
   border-radius: 5px;
   font-size: 15px;
   font-weight: var(--fw-medium);
   padding: 8px 14px;
   line-height: 2;
+  box-shadow: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
 
   @apply cursor-pointer;
 }
 
-.button--active,
-.button:hover,
-.button:active,
-.button:focus-visible {
-  border-color: transparent;
-  background-color: var(--clr-blue-600);
-  color: var(--clr-white);
+.button:is(:hover, :active, :focus-visible) {
+  border-color: var(--clr-blue-600);
+  background-color: var(--clr-white);
+  color: var(--clr-blue-600);
 }
 
-.button--alternative,
-.button--alternative:hover,
-.button--alternative:active,
-.button--alternative:focus-visible {
-  border-color: transparent;
+.button--inverse {
+  border: 1px solid transparent;
+  background-color: var(--clr-grey-50);
+  color: var(--clr-blue-950);
+}
+
+.button--inverse-active,
+.button--inverse:is(:hover, :active, :focus-visible) {
+  border-color: var(--clr-blue-950);
+  background-color: var(--clr-white);
+  color: var(--clr-grey-600);
+}
+
+
+.button--alternative {
+  border: 1px solid transparent;
   background-color: var(--clr-red-400);
   color: var(--clr-white);
+  
 }
+
+.button--alternative:is(:hover, :active, :focus-visible ) {
+  border-color: var(--clr-red-400);
+  background-color: var(--clr-white);
+  color: var(--clr-red-400);
+}
+
 
 .button--red {
   background-color: var(--clr-white);

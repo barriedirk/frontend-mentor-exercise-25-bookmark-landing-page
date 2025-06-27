@@ -11,19 +11,20 @@
     "deploy": "bun run build-css && bun run build && bun run copy-dist"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/cli": "4.1.7",
     "@types/bun": "latest",
-    "postcss-custom-properties": "^14.0.4",
-    "postcss-import": "^16.1.0",
-    "tailwindcss": "^4.1.7"
+    "postcss-custom-properties": "14.0.4",
+    "postcss-import": "16.1.0",
+    "tailwindcss": "4.1.7",
+    "gh-pages": "6.3.0"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "5.0.0"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.21",
-    "chokidar": "^4.0.3",
-    "postcss-nesting": "^13.0.1"
+    "autoprefixer": "10.4.21",
+    "chokidar": "4.0.3",
+    "postcss-nesting": "13.0.1"
   },
   "browserslist": "> 1%, last 2 versions, not dead"
 }

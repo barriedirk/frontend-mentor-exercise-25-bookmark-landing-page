@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <meta name="author" content="Barrie Freyre" />
+
+    <meta name="linkedin" content="https://www.linkedin.com/in/barriefreyre/" />
+    <meta name="github" content="https://github.com/barriedirk" />
+    <meta
+      name="frontendmentor"
+      content="https://www.frontendmentor.io/profile/barriedirk"
+    />
+
+    <link rel="me" href="https://www.linkedin.com/in/barriefreyre/" />
+    <link rel="me" href="https://github.com/barriedirk" />
+    <link rel="me" href="https://www.frontendmentor.io/profile/barriedirk" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Barrie Freyre",
+        "url": "",
+        "sameAs": [
+          "https://www.linkedin.com/in/barriefreyre/",
+          "https://github.com/barriedirk",
+          "https://www.frontendmentor.io/profile/barriedirk"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body class="bg-white">
+    <header id="header" class="header" role="banner">
+      <div
+        class="container pt-11 px-5 md:px-22 flex flex-row justify-between items-center"
+      >
+        <a href="/" class="header__logo" aria-label="Go to homepage">
+          <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
+            <use href="./assets/logo-bookmark.svg#icon-logo" />
+          </svg>
+        </a>
+
+        <nav
+          class="header__nav flex flex-row justify-center items-center"
+          aria-label="Main navigation"
+        >
+          <button
+            id="headerBtnToggle"
+            class="header__toggle bg-transparent border-0"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="header-menu"
+          >
+            <span class="sr-only">Open/Close Menu</span>
+          </button>
+
+          <ul id="header-menu" class="header__nav-list" role="menu">
+            <li class="header__nav-item" role="none">
+              <a href="#features" class="header__nav-link" role="menuitem"
+                >Features</a
+              >
+            </li>
+            <li class="header__nav-item" role="none">
+              <a href="#pricing" class="header__nav-link" role="menuitem"
+                >Pricing</a
+              >
+            </li>
+            <li class="header__nav-item" role="none">
+              <a href="#contact" class="header__nav-link" role="menuitem"
+                >Contact</a
+              >
+            </li>
+            <li class="header__nav-item header__nav-item--login" role="none">
+              <a
+                href="#login"
+                class="header__nav-link header__nav-link--login"
+                role="menuitem"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section
+        id="hero"
+        class="hero mt-9 sm:mt-26"
+        aria-labelledby="hero__title"
+      >
+        <div class="container pt-11 sm:pt-1 px-5 md:px-22">
+          <figure class="figure hero__figure m-auto relative">
+            <img
+              src="./assets/illustration-hero.svg"
+              alt="Illustration of a browser"
+              class="figure__image hero__image transition-all duration-700 ease-in-out scale-90 md:scale-100"
+              role="presentation"
+              aria-hidden="true"
+            />
+          </figure>
+
+          <div class="hero__content">
+            <h1 class="hero__title section-title mt-24 mb-8" id="hero__title">
+              A Simple Bookmark Manager
+            </h1>
+
+            <p class="hero__description section-description opacity-50 mb-8">
+              A clean and simple interface to organize your favourite websites.
+              Open a new browser tab and see your sites load instantly. Try it
+              for free.
+            </p>
+
+            <div class="hero__actions">
+              <button
+                type="button"
+                class="hero__button button"
+                aria-label="Download for Chrome"
+              >
+                Get it on Chrome
+              </button>
+              <button
+                type="button"
+                class="hero__button button button--inverse"
+                aria-label="Download for Firefox"
+              >
+                Get it on Firefox
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features mt-36 sm:mt-10">
+        <div class="container pt-11 px-5 md:px-22">
+          <h2 class="features__title section-title mb-4">Features</h2>
+
+          <p class="features__description section-description opacity-50 mb-4">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+
+          <div
+            class="feature_tabs tabs"
+            role="tablist"
+            aria-label="Features of our App"
+          >
+            <div class="tabs__tab-group my-12">
+              <button
+                type="button"
+                class="tabs__tab tabs__tab--active"
+                id="tab-1"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+                tabindex="0"
+              >
+                <span>Simple Bookmarking</span>
+              </button>
+              <button
+                type="button"
+                class="tabs__tab"
+                id="tab-2"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+                tabindex="-1"
+              >
+                <span>Speedy Searching</span>
+              </button>
+              <button
+                type="button"
+                class="tabs__tab"
+                id="tab-3"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-3"
+                tabindex="-1"
+              >
+                <span>Easy Sharing</span>
+              </button>
+            </div>
+
+            <div
+              class="tabs__panel tabs__panel--active"
+              id="panel-1"
+              role="tabpanel"
+              aria-labelledby="tab-1"
+            >
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
+                <img
+                  src="./assets/illustration-features-tab-1.svg"
+                  alt="Illustration of a Bookmark in one click"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center md:text-left">
+                <h2 class="section-title tab__title mb-4">
+                  Bookmark in one click
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
+
+            <div
+              class="tabs__panel"
+              id="panel-2"
+              role="tabpanel"
+              aria-labelledby="tab-2"
+              aria-hidden="true"
+              hidden
+            >
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
+                <img
+                  src="./assets/illustration-features-tab-2.svg"
+                  alt="Illustration of a Intelligent search"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center md:text-left">
+                <h2 class="section-title tab__title mb-4">
+                  Intelligent search
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
+
+            <div
+              class="tabs__panel"
+              id="panel-3"
+              role="tabpanel"
+              aria-labelledby="tab-3"
+              aria-hidden="true"
+              hidden
+            >
+              <figure
+                class="tabs__header figure features__figure m-auto relative"
+              >
+                <img
+                  src="./assets/illustration-features-tab-3.svg"
+                  alt="Illustration of a Share your bookmarks"
+                  class="figure__image features__image"
+                  role="presentation"
+                  aria-hidden="true"
+                />
+              </figure>
+              <div class="tabs__contain text-center md:text-left">
+                <h2 class="section-title tab__title mb-4">
+                  Share your bookmarks
+                </h2>
+                <p class="section-description tab__description opacity-50 mb-8">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <a href="#" class="button">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="pricing"
+        class="download mt-23"
+        aria-labelledby="download_heading"
+      >
+        <div class="container pt-11 px-5 md:px-22">
+          <h2
+            id="download_heading"
+            class="section-title download__title mt-24 md:mt-10 mb-8"
+          >
+            Download the extension
+          </h2>
+
+          <p
+            id="download_description"
+            class="section-description download__description opacity-50 mb-8"
+          >
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+
+          <div
+            class="cards flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-6"
+            role="list"
+          >
+            <div
+              class="card flex flex-col items-center justify-center"
+              aria-labelledby="card_chrome"
+              aria-describedby="chrome_version"
+            >
+              <figure class="card__figure">
+                <img
+                  src="./assets/logo-chrome.svg"
+                  alt="Chrome Logo"
+                  class="card__image"
+                  aria-hidden="true"
+                />
+              </figure>
+              <h3
+                id="card_chrome"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
+              >
+                Add to Chrome
+              </h3>
+              <span
+                id="chrome_version"
+                class="section-description card__description opacity-50"
+                >Minimum version 62</span
+              >
+              <hr class="card__separator" />
+              <a href="#" class="button">Add & Install Extension</a>
+            </div>
+
+            <div
+              class="card flex flex-col items-center justify-center"
+              aria-labelledby="card_firefox"
+              aria-describedby="firefox_version"
+            >
+              <figure class="card__figure">
+                <img
+                  src="./assets/logo-firefox.svg"
+                  alt="Firefox Logo"
+                  class="card__image"
+                  aria-hidden="true"
+                />
+              </figure>
+              <h3
+                id="card_firefox"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
+              >
+                Add to Firefox
+              </h3>
+              <span
+                id="firefox_version"
+                class="section-description card__description opacity-50"
+                >Minimum version 55</span
+              >
+              <hr class="card__separator" />
+              <a href="#" class="button">Add & Install Extension</a>
+            </div>
+
+            <div
+              class="card flex flex-col items-center justify-center"
+              aria-describedby="card_opera"
+            >
+              <figure class="card__figure">
+                <img
+                  src="./assets/logo-opera.svg"
+                  alt="Opera Logo"
+                  class="card__image"
+                  aria-hidden="true"
+                />
+              </figure>
+              <h3
+                id="card_opera"
+                class="section-subtitle card__title mt-9 mb-7 sm:my-3"
+              >
+                Add to Opera
+              </h3>
+              <span class="section-description card__description opacity-50"
+                >Minimum version 46</span
+              >
+              <hr class="card__separator" />
+              <a href="#" class="button">Add & Install Extension</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="faq mt-23 lg:mt-40 flex flex-col items-center justify-center"
+        aria-labelledby="faq_heading"
+        aria-describedby="faq_description"
+      >
+        <div class="container pt-11 px-5 md:px-22">
+          <h2 id="faq_heading" class="section__title faq__title mb-8">
+            Frequently Asked Questions
+          </h2>
+
+          <p
+            id="faq__description"
+            class="section__description faq__description opacity-50 mb-8"
+          >
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">
+                What is Bookmark?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__answer opacity-50">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                How can I request a new browser?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq__answer opacity-50">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                Is there a mobile app?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer opacity-50">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </p>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                What about other Chromium browsers?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer opacity-50">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit.
+              </p>
+            </details>
+          </div>
+          <div class="mt-12 text-center">
+            <a href="#" class="button inline-block">More Info</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="form mt-23">
+        <div class="container py-[45px] px-5 md:px-22">
+          <h2 class="form__subtitle mb-2">35,000+ already joined</h2>
+          <h3 class="form__title mb-7">
+            Stay up-to-date with what we’re doing
+          </h3>
+
+          <form class="form-email" method="POST" novalidate>
+            <div class="form__group mb-4">
+              <input
+                class="form__input"
+                type="email"
+                required
+                placeholder="Enter your email address"
+              />
+              <span class="error-message">
+                Whoops, make sure it’s an email</span
+              >
+            </div>
+            <button
+              type="submit"
+              class="form__button button button--alternative"
+            >
+              Contact Us
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container pt-11 px-5">
+        <a href="/" class="footer__logo" aria-label="Go to homepage">
+          <svg class="logo" width="148" height="25" aria-label="Bookmark logo">
+            <use href="./assets/logo-bookmark.svg#icon-logo" />
+          </svg>
+        </a>
+        <nav class="footer__nav" aria-label="Main navigation">
+          <ul class="footer__nav-list" role="menu">
+            <li class="footer__nav-item" role="none">
+              <a href="#features" class="footer__nav-link" role="menuitem"
+                >Features</a
+              >
+            </li>
+            <li class="footer__nav-item" role="none">
+              <a href="#pricing" class="footer__nav-link" role="menuitem"
+                >Pricing</a
+              >
+            </li>
+            <li class="footer__nav-item" role="none">
+              <a href="#contact" class="footer__nav-link" role="menuitem"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul
+          class="footer__social-network flex flex-row items-center justify-center gap-10 sm:gap-5"
+        >
+          <li class="footer__social-network-item">
+            <a
+              href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+              target="_blank"
+              class="footer__social-network-item"
+              rel="noopener"
+              aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+            >
+              <svg class="icon-facebook" aria-label="Icon Facebook" role="img">
+                <use href="./assets/icon-facebook.svg#icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-network-item">
+            <a
+              href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+              target="_blank"
+              target="_blank"
+              class="footer__social-network-item"
+              rel="noopener"
+              aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+            >
+              <svg class="icon-twitter" aria-label="Icon Twitter" role="img">
+                <use href="./assets/icon-twitter.svg#icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__attribution pt-10 pb-8">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/profile/barriedirk/solutions"
+          target="_blank"
+          rel="noopener"
+          aria-label="View solutions by Barrie Freyre on Frontend Mentor"
+        >
+          Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.linkedin.com/in/barriefreyre/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit Barrie Freyre's LinkedIn profile"
+        >
+          Barrie Freyre</a
+        >.
+      </div>
+    </footer>
+  </body>
+</html>
